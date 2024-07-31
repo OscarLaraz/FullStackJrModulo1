@@ -1,0 +1,133 @@
+/** selector universal */
+*{
+    margin: 0;
+    padding: 0;
+    /** manejamos que las cajitas no se sobrepasen del contenedor */
+    box-sizing: border-box;
+}
+
+.titulo{
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin: 30px;
+            }
+
+header img { 
+                display: flex;
+                width: 95%;
+                height:400px;
+                margin: 0 auto;
+               
+                object-fit: cover;
+                flex: 0 0 400px;
+                border-radius: 20px;
+                
+}
+
+.subtitulo{
+                margin: 15px auto;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                width: 95%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/**se define la disposicion de las las shadow box*/
+.tiempo{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            margin-left: 20px;
+            
+            
+}
+/**otras propiedades de la shadow box*/
+.c-tiempo{ 
+             box-shadow:  0 4px 6px rgba(239, 92, 8, 0.1);
+             padding: 40px;
+             background-color: rgb(246,242,240); 
+             border-radius: 8px; 
+             text-align: left;
+             width: 80%;
+             margin-right: 20px;
+            transition:  0.5s;
+            
+}
+/**efecto de cambio de color en shadow box*/
+.c-tiempo:hover{
+                    background-color: rgba(239, 243, 9, 0.1);
+}
+/**alineacion del contenido s b*/
+.c-tiempo h5{
+                
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: normal;
+                font-size: 0.8rem;
+                margin-bottom: 15px;
+              
+}
+
+
+.c-tiempo p {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
+                font-size: 1.2rem;
+}
+
+
+/**diseño de contenido de la receta*/
+main{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left:20px;
+}
+
+.title{
+          margin-bottom: 30px;  
+}
+
+ul li {
+    margin-bottom: 30px;
+    text-decoration: none;
+    list-style: none;
+  }
+
+ul p{
+        margin-top: -30px;
+        margin-bottom: 30px;       
+}  
+
+/** USO DE MEDIA QUERY */
+@media(max-width: 576px){
+    .tiempo{
+        display: flex;
+/**se cambia la disposicion de las box-shadow de filas a columnas*/
+        flex-direction: column;
+        align-content: space-around;
+
+    }
+
+    .c-tiempo{
+        height: 120px;
+        margin-top: 20px;
+        width: 90%;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .subtitulo{ 
+                margin-bottom: 10px;
+    }
+
+    main{
+        text-align: center;
+    }
+    .subtitulo{text-align: center;}
+}
+
+
+@media(min-width: 768px){
+
+    header img {
+                    height: 700px;
+    }
+
+}
